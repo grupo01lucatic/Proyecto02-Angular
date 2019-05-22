@@ -3,9 +3,10 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { IndexComponent } from './index/index.component';
-import { ListadocontactosComponent } from './listadocontactos/listadocontactos.component';
+import { HeaderComponent } from './components/header/header.component';
+import { IndexComponent } from './components/index/index.component';
+import { ListadocontactosComponent } from './components/listadocontactos/listadocontactos.component';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ListadocontactosComponent } from './listadocontactos/listadocontactos.c
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

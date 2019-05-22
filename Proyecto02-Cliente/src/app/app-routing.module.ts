@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HeaderComponent } from './header/header.component';
-import { IndexComponent } from './index/index.component';
-import { ListadocontactosComponent } from './listadocontactos/listadocontactos.component';
+import { HeaderComponent } from './components/header/header.component';
+import { IndexComponent } from './components/index/index.component';
+import { ListadocontactosComponent } from './components/listadocontactos/listadocontactos.component';
 
 const routes: Routes = [
   {path: 'header', component: HeaderComponent},
