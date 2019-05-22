@@ -25,8 +25,8 @@ export class PersonaService {
   }
 
   //http://localhost:8080/user-portal/users/5
-  public deleteUser(persona) {
-    return this.http.delete(this.personaUrl + "/"+ persona.idpersona);
+  public deletePersona(persona) {
+    return this.http.delete('http://localhost:8080/rest/eliminarcontacto'+persona.idpersona);
   }
 
   public createPersona(persona) {

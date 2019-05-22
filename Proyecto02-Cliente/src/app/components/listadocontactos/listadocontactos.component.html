@@ -1,18 +1,19 @@
 <div class="card border-primary mb-3">
     <div class="card-body text-primary">
-      <p class="card-text">Listado de Contactos</p>
+        <p class="card-text">Listado de Contactos</p>
     </div>
-   </div>
-   <table class="table table-bordered table-striped">
+</div>
+<table class="table table-bordered table-striped">
     <thead>
         <tr>
-          <th>id</th>
-          <th>nombre</th>
-          <th>apellido1</th>
-          <th>apellido2</th>
-          <th>dni</th>
-          <th>fechanacimiento</th>
-          </tr>
+            <th>id</th>
+            <th>nombre</th>
+            <th>apellido1</th>
+            <th>apellido2</th>
+            <th>dni</th>
+            <th>fechanacimiento</th>
+            <th>borrar</th>
+        </tr>
     </thead>
     <tbody>
         <tr *ngFor="let persona of persona">
@@ -22,8 +23,8 @@
             <td>{{persona.apellido2}}</td>
             <td>{{persona.dni}}</td>
             <td>{{persona.fechanacimiento}}</td>
-            </tr>
+            <td><button class="btn btn-danger" (click)=deletePersona(persona)> Eliminar contacto</button></td>
+        </tr>
     </tbody>
-   </table>
+</table>
 <router-outlet></router-outlet>
-
