@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Alta nuevo usuario</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="stilos.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <i class="far fa-address-card"></i>
+        <a class="navbar-brand" th:href="@{/}"> Agenda</a>
+    </nav>
+    <main role="main" class="flex-shrink-0">
+        <div class="container">
+            <h1>Crear un contacto nuevo</h1>
+
+            <form th:action="@{/createContacto}" th:object="${persona}" method="post">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputNombre">Nombre</label>
+                        <input type="text" class="form-control" id="inputNombre" placeholder="Nombre" th:field="*{nombre}">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputApellido1">Primer Apellido</label>
+                        <input type="text" class="form-control" id="inputApellido1" placeholder="Primer apellido" th:field="*{apellido1}">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputApellido2">Segundo Apellido</label>
+                        <input type="text" class="form-control" id="inputApellido2" placeholder="Segundo apellido" th:field="*{apellido2}">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputDni">DNI</label>
+                        <input type="text" class="form-control" id="inputDni" placeholder="DNI" th:field="*{dni}">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputFechadenacimiento">Fecha de nacimiento</label>
+                        <input type="text" class="form-control" id="inputFechadenacimiento" placeholder="Fecha de nacimiento" th:field="*{fechanacimiento}">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputTelefono">Telefono</label>
+                        <input type="text" class="form-control" id="inputTelefono" placeholder="Telefono" th:field="*{telefonos[0].telefono}">
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="inputTelefono">Codigo postal</label>
+                        <input type="text" class="form-control" id="inputCodPostal" placeholder="Codigo Postal" th:field="*{direccions[0].codpostal}">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputTelefono">Direccion</label>
+                        <input type="text" class="form-control" id="inputDireccion" placeholder="Direccion" th:field="*{direccions[0].direccion}">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputTelefono">Localidad</label>
+                        <input type="text" class="form-control" id="inputLocalidad" placeholder="Localidad" th:field="*{direccions[0].localidad}">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputProvincia">Provincia</label>
+                        <input type="hidden" th:field="*{direccions[0].iddireccion}">
+                        <select class="form-control" id="inputProvincia" th:field="*{direccions[0].provincia}">
+                            <option th:each="provincia : ${provincias}" th:value="${provincia.idprovincia}" th:text="${provincia.provincia}"></option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary" th:text='Crear'>Crear</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

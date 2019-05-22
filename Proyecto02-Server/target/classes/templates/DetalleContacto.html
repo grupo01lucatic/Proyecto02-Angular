@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8" />
+<title th:text="${persona.nombre}">Insert title here</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" />
+</head>
+
+<body>
+	<div class="container">
+		<h1 th:text=${titulo}
+			class="text-secondary border-top-0 border-left-0 border-right-0"></h1>
+	 <br>
+	 <a class="btn btn-primary btn-xs" th:href="@{/edit/} + ${persona.idpersona}" th:text="'Editar Contacto'"></a>
+					<a class="btn btn-danger btn-xs" th:href="@{/delete/} + ${persona.idpersona}" 
+					th:text="'Eliminar Contacto'" onclick ="return confirm('Estas seguro que quieres eliminar?')">					
+					</a>
+		
+	    <div>
+	    <br>
+	    	<table class="table table-striped table-bordered">
+			<thead class="thead-inverse">
+				<tr>
+					<th class="text-center">Nombre de contacto</th>
+					<th class="text-center">Primer apellido</th>
+					<th class="text-center">Segundo Apellido</th>
+					<th class="text-center">DNI</th>
+					<th class="text-center">FechaNacimiento</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="persona: ${persona}" class="bg-white">
+					<td class="text-center" th:text="${persona.nombre}"></td>
+					<td class="text-center" th:text="${persona.apellido1}"></td>
+					<td class="text-center" th:text="${persona.apellido2}"></td>
+					<td class="text-center" th:text="${persona.dni}"></td>
+					<td class="text-center" th:text="${persona.fechanacimiento}"></td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="table table-striped table-bordered">
+			<thead class="thead-inverse">
+				<tr>
+					<th class="text-center">Direcciones</th>
+					<th class="text-center">C.Postal</th>
+					<th class="text-center">Localidad</th>
+					<th class="text-center">Provincia</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="direccion: ${persona.direccions}">
+					<td class="text-center" th:text="${direccion.direccion}"></td>
+					<td class="text-center" th:text="${direccion.codpostal}"></td>
+					<td class="text-center" th:text="${direccion.localidad}"></td>
+					<td class="text-center" th:text="${direccion.provincia.provincia}"></td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="table table-striped table-bordered center">
+			<thead class="thead-inverse">
+				<tr>
+					<th class="text-center">Telefonos</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="text-center" th:each="telefono: ${persona.telefonos}">
+					<td class="text-center" th:text="${telefono.telefono}"></td>
+				</tr>
+			</tbody>
+		</table>
+	    
+	    </div>
+		
+	</div>
+</body>
+
+</html>
