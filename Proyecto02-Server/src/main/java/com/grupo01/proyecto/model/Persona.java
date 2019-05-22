@@ -4,6 +4,9 @@ import java.io.Serializable;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreType;
+
 import java.util.Date;
 import java.util.List;
 
@@ -22,6 +25,7 @@ import javax.persistence.TemporalType;
  */
 @Entity
 @NamedQuery(name = "Persona.findAll", query = "SELECT p FROM Persona p")
+@JsonIgnoreType
 public class Persona implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -43,9 +47,11 @@ public class Persona implements Serializable {
 	private String nombre;
 
 	@OneToMany(mappedBy = "persona")
+	@JsonIgnore
 	private List<Direccion> direccions;
 
 	@OneToMany(mappedBy = "persona")
+	@JsonIgnore
 	private List<Telefono> telefonos;
 
 	public Persona() {
