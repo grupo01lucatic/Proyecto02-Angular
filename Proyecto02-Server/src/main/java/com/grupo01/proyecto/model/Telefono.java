@@ -19,6 +19,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreType;
  */
 @Entity
 @NamedQuery(name = "Telefono.findAll", query = "SELECT t FROM Telefono t")
+@JsonIgnoreType
 public class Telefono implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -32,6 +33,7 @@ public class Telefono implements Serializable {
 	// bi-directional many-to-one association to Persona
 	@ManyToOne
 	@JoinColumn(name = "idpersona")
+	@JsonIgnore
 	private Persona persona;
 
 	public Telefono() {
