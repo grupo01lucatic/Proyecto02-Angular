@@ -16,9 +16,9 @@ export class ListadoprovinciasComponent implements OnInit {
 
   ngOnInit() {
     this.provinciaService.getProvincia()
-    .subscribe( data => {
-      this.provincia = data;
-    });
+      .subscribe(data => {
+        this.provincia = data;
+      });
   }
 
 }

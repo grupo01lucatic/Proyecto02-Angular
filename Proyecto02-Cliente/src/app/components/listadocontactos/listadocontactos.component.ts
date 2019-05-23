@@ -16,15 +16,9 @@ export class ListadocontactosComponent implements OnInit {
 
   ngOnInit() {
     this.personaService.getPersona()
-      .subscribe( data => {
+      .subscribe(data => {
         this.persona = data;
       });
   }
 
-  deletePersona(persona: Persona): void {
-    this.personaService.deletePersona(persona)
-      .subscribe( data => {
-        this.persona = this.persona.filter(u => u !== persona);
-      })
-  };
 }

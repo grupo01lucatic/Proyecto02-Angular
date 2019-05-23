@@ -27,7 +27,7 @@ import { ListadoprovinciasComponent } from './components/listadoprovincias/lista
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule 
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
