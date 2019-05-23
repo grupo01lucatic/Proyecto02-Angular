@@ -10,7 +10,7 @@ import { Provincia } from 'src/app/models/Provincia';
 })
 export class AltaprovinciasComponent implements OnInit {
 
-  provincia: Provincia = new Provincia
+  provincia: Provincia = new Provincia();
 
  constructor(private router: Router, private provinciaService: ProvinciaService) {
 

@@ -9,7 +9,6 @@ import { ListadocontactosComponent } from './components/listadocontactos/listado
 import { HttpClientModule } from "@angular/common/http";
 import { ContactoDetalleComponent } from './contacto-detalle/contacto-detalle.component';
 import { AddContactoComponent } from './components/add-contacto/add-contacto.component';
-import { FormsModule } from '@angular/forms';
 import { ListadoprovinciasComponent } from './components/listadoprovincias/listadoprovincias.component';
 import { AltaprovinciasComponent } from './components/altaprovincias/altaprovincias.component';
 import { FormsModule } from '@angular/forms';
