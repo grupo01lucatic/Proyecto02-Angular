@@ -11,6 +11,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.NamedQuery;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreType;
 
 /**
  * The persistent class for the telefono database table.
@@ -18,6 +19,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
  */
 @Entity
 @NamedQuery(name = "Telefono.findAll", query = "SELECT t FROM Telefono t")
+@JsonIgnoreType
 public class Telefono implements Serializable {
 
 	private static final long serialVersionUID = 1L;
