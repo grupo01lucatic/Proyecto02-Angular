@@ -8,7 +8,7 @@ import { Persona } from 'src/app/models/persona';
   templateUrl: './add-contacto.component.html',
   styleUrls: ['./add-contacto.component.css']
 })
-export class  AddContactoComponent implements OnInit {
+export class AddContactoComponent implements OnInit {
 
   persona: Persona = new Persona();
 
@@ -18,9 +18,9 @@ export class  AddContactoComponent implements OnInit {
 
   createContacto(): void {
     this.personaService.createContacto(this.persona)
-        .subscribe( data => {
-          alert("Se ha añadido un contacto nuevo");
-        });
+      .subscribe(data => {
+        alert("Se ha añadido un contacto nuevo");
+      });
   };
 
   ngOnInit() {

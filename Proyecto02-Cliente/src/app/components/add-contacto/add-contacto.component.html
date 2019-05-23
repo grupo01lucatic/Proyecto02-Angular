@@ -1,31 +1,33 @@
-<div class="col-md-6">
-  <h2 class="text-center">Alta persona</h2>
- <form>
-  <div>
+<div class="col-md-6" id="add">
+  <h1 class="text-center">Alta persona</h1>
+  <form>
+    <div>
       <br>
-    <!--<label for="nombre">Nombre:<br></label> -->
-    <input type="text" [(ngModel)]="persona.nombre" placeholder="Nombre" name="nombre" class="form-control" id="nombre"><br>
-  </div>
- 
-  <div >
-   <!-- <label for="apellido1">Primer apellido:<br></label>-->
-    <input type="text" [(ngModel)]="persona.apellido1" placeholder="Primer Apellido" name="apellido1" class="form-control" id="apellido1"><br>
-  </div>
- 
-  <div>
-   <!-- <label for="apellido2">Segundo apellido:<br></label>-->
-    <input type="text" [(ngModel)]="persona.apellido2" placeholder="Segundo Apellido" name="apellido2" class="form-control" id="apellido2"><br>
-  </div>
-  <div>
-   <!-- <label for="dni">DNI:<br></label>-->
-    <input type="text" [(ngModel)]="persona.dni" placeholder="DNI" name="dni" class="form-control" id="dni"><br>
-  </div>
-  <div>
-   <!-- <label for="fechanacimiento">Fecha de nacimiento:<br></label>-->
-    <input type="text" [(ngModel)]="persona.fechanacimiento" placeholder="Fecha de Nacimiento" name="fechanacimiento" class="form-control" id="fechanacimiento"><br>
-  </div>
-  <br>
+      <!--<label for="nombre">Nombre:<br></label> -->
+      <input type="text" [(ngModel)]="persona.nombre" placeholder="Nombre" name="nombre" class="form-control"
+        id="nombre"><br>
+    </div>
+    <div>
+      <!-- <label for="apellido1">Primer apellido:<br></label>-->
+      <input type="text" [(ngModel)]="persona.apellido1" placeholder="Primer Apellido" name="apellido1"
+        class="form-control" id="apellido1"><br>
+    </div>
 
+    <div>
+      <!-- <label for="apellido2">Segundo apellido:<br></label>-->
+      <input type="text" [(ngModel)]="persona.apellido2" placeholder="Segundo Apellido" name="apellido2"
+        class="form-control" id="apellido2"><br>
+    </div>
+    <div>
+      <!-- <label for="dni">DNI:<br></label>-->
+      <input type="text" [(ngModel)]="persona.dni" placeholder="DNI" name="dni" class="form-control" id="dni"><br>
+    </div>
+    <div>
+      <!-- <label for="fechanacimiento">Fecha de nacimiento:<br></label>-->
+      <input type="text" [(ngModel)]="persona.fechanacimiento" placeholder="Fecha de Nacimiento" name="fechanacimiento"
+        class="form-control" id="fechanacimiento"><br>
+    </div>
+    <br>
   <button class="btn btn-success" (click)=createContacto() routerLink="/">Guardar Contacto</button>
-</form>
+  </form>
 </div>

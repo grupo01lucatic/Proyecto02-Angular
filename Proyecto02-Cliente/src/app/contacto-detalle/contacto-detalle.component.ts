@@ -22,7 +22,7 @@ export class ContactoDetalleComponent implements OnInit {
     this.personaService.getDetalle(Number(id)).subscribe((persona: Persona) => this.persona = persona);
 
   }
-  
+
 
   deletePersona(): void {
     if (window.confirm("Estas seguro que quieres eliminar?")) {

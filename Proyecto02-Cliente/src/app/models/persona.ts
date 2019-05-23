@@ -6,7 +6,6 @@ export class Persona {
     apellido1: string;
     apellido2: string;
     dni: string;
-    date: Date;
     nombre: string;
     fechanacimiento: Date;
     direcciones: Direccion[];
