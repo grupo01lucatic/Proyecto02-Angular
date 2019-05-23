@@ -25,7 +25,6 @@ import javax.persistence.TemporalType;
  */
 @Entity
 @NamedQuery(name = "Persona.findAll", query = "SELECT p FROM Persona p")
-@JsonIgnoreType
 public class Persona implements Serializable {
 
 	private static final long serialVersionUID = 1L;
