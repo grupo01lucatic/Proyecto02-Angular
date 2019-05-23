@@ -20,7 +20,7 @@ export class ListadocontactosComponent implements OnInit {
         this.persona = data;
       });
   }
-
+  
   deletePersona(persona: Persona): void {
     this.personaService.deletePersona(persona)
       .subscribe( data => {
