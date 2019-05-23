@@ -1,4 +1,6 @@
 export class Provincia {
-	idprovincia: number;
-	provincia: string;
+	constructor(
+		public idprovincia: number,
+		public provincia: string
+	) { }
 }
