@@ -40,7 +40,7 @@ export class PersonaService {
   }
 
   public createContacto(persona) {
-    return this.http.post<Persona>(this.personaUrl, persona);
+    return this.http.put<Persona>('http://localhost:8080/rest/crearcontacto', persona);
   }
 
 }
