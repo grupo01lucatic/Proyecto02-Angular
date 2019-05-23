@@ -11,7 +11,7 @@ const routes: Routes = [
   {path: 'header', component: HeaderComponent},
   {path: '', component: IndexComponent},
   {path:'listadocontactos', component: ListadocontactosComponent},
-  {path:'detalle/:id', component: ContactoDetalleComponent},
+  {path:'detallecontacto/:id', component: ContactoDetalleComponent},
   {path:'add-contacto', component: AddContactoComponent },
   {path: 'listadoprovincias', component: ListadoprovinciasComponent}
 ];
