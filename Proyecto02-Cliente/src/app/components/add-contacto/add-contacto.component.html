@@ -7,7 +7,6 @@
       <input type="text" [(ngModel)]="persona.nombre" placeholder="Nombre" name="nombre" class="form-control"
         id="nombre"><br>
     </div>
-
     <div>
       <!-- <label for="apellido1">Primer apellido:<br></label>-->
       <input type="text" [(ngModel)]="persona.apellido1" placeholder="Primer Apellido" name="apellido1"
@@ -29,7 +28,6 @@
         class="form-control" id="fechanacimiento"><br>
     </div>
     <br>
-
-    <button class="btn btn-success" (click)="createContacto()">Guardar Contacto</button>
+  <button class="btn btn-success" (click)=createContacto() routerLink="/">Guardar Contacto</button>
   </form>
 </div>
