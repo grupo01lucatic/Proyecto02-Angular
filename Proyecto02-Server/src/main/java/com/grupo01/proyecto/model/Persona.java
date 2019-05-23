@@ -51,6 +51,7 @@ public class Persona implements Serializable {
 	private List<Direccion> direccions;
 
 	@OneToMany(mappedBy = "persona")
+	@JsonIgnore
 	private List<Telefono> telefonos;
 
 	public Persona() {
