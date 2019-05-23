@@ -18,7 +18,7 @@
     <tbody>
         <tr *ngFor="let persona of persona">
             <td>{{persona.idpersona}}</td>
-            <td>{{persona.nombre}}</td>
+            <td><a routerLink="/detallecontacto/{{persona.idpersona}}">{{persona.nombre}}</a></td>
             <td>{{persona.apellido1}}</td>
             <td>{{persona.apellido2}}</td>
             <td>{{persona.dni}}</td>
