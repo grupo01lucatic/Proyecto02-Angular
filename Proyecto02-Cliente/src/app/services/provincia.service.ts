@@ -14,7 +14,7 @@ export class ProvinciaService {
 
   constructor(private http:HttpClient) { }
 
-  private provinciaUrl = 'http://localhost:8080/rest/listadoprovincias';
+  private provinciaUrl = 'http://localhost:8080/rest/listarprovincias';
 
   public getProvincia(){
     return this.http.get<Provincia[]>(this.provinciaUrl);
