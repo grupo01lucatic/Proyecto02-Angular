@@ -11,7 +11,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.NamedQuery;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreType;
 
 /**
  * The persistent class for the telefono database table.
@@ -32,6 +31,7 @@ public class Telefono implements Serializable {
 	// bi-directional many-to-one association to Persona
 	@ManyToOne
 	@JoinColumn(name = "idpersona")
+	@JsonIgnore
 	private Persona persona;
 
 	public Telefono() {
