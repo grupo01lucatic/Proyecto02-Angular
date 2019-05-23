@@ -8,6 +8,8 @@ import { IndexComponent } from './components/index/index.component';
 import { ListadocontactosComponent } from './components/listadocontactos/listadocontactos.component';
 import { HttpClientModule } from "@angular/common/http";
 import { ContactoDetalleComponent } from './contacto-detalle/contacto-detalle.component';
+import { AddContactoComponent } from './components/add-contacto/add-contacto.component';
+import { FormsModule } from '@angular/forms';
 import { ListadoprovinciasComponent } from './components/listadoprovincias/listadoprovincias.component';
 import { AltaprovinciasComponent } from './components/altaprovincias/altaprovincias.component';
 import { FormsModule } from '@angular/forms';
@@ -19,16 +21,15 @@ import { FormsModule } from '@angular/forms';
     IndexComponent,
     ListadocontactosComponent,
     ContactoDetalleComponent,
-    ListadoprovinciasComponent,
-    AltaprovinciasComponent
-
+    AltaprovinciasComponent,
+    AddContactoComponent,
+    ListadoprovinciasComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
-    
+    FormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

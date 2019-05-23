@@ -4,7 +4,7 @@ import { PersonaService } from '../services/persona.service';
 import { Telefono } from '../models/Telefono';
 import { Direccion } from '../models/Direccion';
 import { Provincia } from '../models/Provincia';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-contacto-detalle',
@@ -14,12 +14,15 @@ import { Router } from '@angular/router';
 export class ContactoDetalleComponent implements OnInit {
   persona: Persona
 
-  constructor(private router: Router, private personaService: PersonaService) { }
+  constructor(private router: Router, private personaService: PersonaService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.personaService.getDetalle(1).subscribe((persona: Persona) => this.persona = persona);
+    const id = this.route.snapshot.paramMap.get('id');
+
+    this.personaService.getDetalle(Number(id)).subscribe((persona: Persona) => this.persona = persona);
 
   }
+  
 
   deletePersona(): void {
     if (window.confirm("Estas seguro que quieres eliminar?")) {

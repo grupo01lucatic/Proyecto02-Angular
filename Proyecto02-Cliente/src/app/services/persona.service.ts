@@ -39,8 +39,8 @@ export class PersonaService {
     return this.http.delete('http://localhost:8080/rest/eliminarcontacto'+persona.idpersona);
   }
 
-  public createPersona(persona) {
-    return this.http.post<Persona>(this.personaUrl, persona);
+  public createContacto(persona) {
+    return this.http.put<Persona>('http://localhost:8080/rest/crearcontacto', persona);
   }
 
 }
