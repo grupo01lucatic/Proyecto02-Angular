@@ -8,6 +8,7 @@ import { IndexComponent } from './components/index/index.component';
 import { ListadocontactosComponent } from './components/listadocontactos/listadocontactos.component';
 import { HttpClientModule } from "@angular/common/http";
 import { ContactoDetalleComponent } from './contacto-detalle/contacto-detalle.component';
+import { ListadoprovinciasComponent } from './components/listadoprovincias/listadoprovincias.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ContactoDetalleComponent } from './contacto-detalle/contacto-detalle.co
     HeaderComponent,
     IndexComponent,
     ListadocontactosComponent,
-    ContactoDetalleComponent
+    ContactoDetalleComponent,
+    ListadoprovinciasComponent
 
   ],
   imports: [
