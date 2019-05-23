@@ -1,3 +1,6 @@
+import { Direccion } from './Direccion';
+import { Telefono } from './Telefono';
+
 export class Persona {
     idpersona: number;
     apellido1: string;
@@ -5,4 +8,7 @@ export class Persona {
     dni: string;
     date: Date;
     nombre: string;
+    fechanacimiento: Date;
+    direcciones: Direccion[];
+    telefonos: Telefono[];
 }

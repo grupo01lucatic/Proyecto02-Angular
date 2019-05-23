@@ -9,6 +9,9 @@ const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
 
+const URL_BASE = 'http://localhost:8080/rest';
+const URL_DETALLE = (id:number) => `${URL_BASE}/detallecontacto${id}`;
+
 @Injectable({
   providedIn: 'root'
 })
@@ -18,7 +21,14 @@ export class PersonaService {
   constructor(private http:HttpClient) {}
 
   private personaUrl = 'http://localhost:8080/rest/listadocontactos';
+
   //private userUrl = '/api';
+
+  // GET
+  public getDetalle(id:number) {
+    return this.http.get<Persona>(URL_DETALLE(id));
+  }
+
 
   public getPersona() {
     return this.http.get<Persona[]>(this.personaUrl);
