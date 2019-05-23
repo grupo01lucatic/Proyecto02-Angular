@@ -1,0 +1,60 @@
+<div class="container">
+  <h1 th:text=${titulo} class="text-secondary border-top-0 border-left-0 border-right-0"></h1>
+  <br>
+  <a class="btn btn-primary btn-xs" routerLink="/editar/{{persona.idpersona}}">Editar</a>
+  <a class="btn btn-danger btn-xs" (click)=deletePersona()>Borrar</a>
+
+  <div>
+    <br>
+    <table class="table table-striped table-bordered">
+      <thead class="thead-inverse">
+        <tr>
+          <th class="text-center">Nombre de contacto</th>
+          <th class="text-center">Primer apellido</th>
+          <th class="text-center">Segundo Apellido</th>
+          <th class="text-center">DNI</th>
+          <th class="text-center">FechaNacimiento</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bg-white">
+          <td class="text-center">{{persona.nombre}}</td>
+          <td class="text-center">{{persona.apellido1}}</td>
+          <td class="text-center">{{persona.apellido2}}</td>
+          <td class="text-center">{{persona.dni}}</td>
+          <td class="text-center">{{persona.fechanacimiento}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="table table-striped table-bordered">
+      <thead class="thead-inverse">
+        <tr>
+          <th class="text-center">Direcciones</th>
+          <th class="text-center">C.Postal</th>
+          <th class="text-center">Localidad</th>
+          <th class="text-center">Provincia</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let direccion of persona.direcciones">
+          <td class="text-center">{{direccion.direccion}}</td>
+          <td class="text-center">{{direccion.codpostal}}</td>
+          <td class="text-center">{{direccion.localidad}}</td>
+          <td class="text-center">{{direccion.provincia.provincia}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="table table-striped table-bordered center">
+      <thead class="thead-inverse">
+        <tr>
+          <th class="text-center">Telefonos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="text-center" *ngFor="let telefono of persona.telefonos">
+          <td class="text-center">{{telefono.telefono}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,4 +1,8 @@
 /* Globals */
+
+header{
+    margin-bottom: 155%;
+}
 main > .container {
     padding: 100px 15px 0;
 }
