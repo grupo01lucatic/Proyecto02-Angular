@@ -1,0 +1,22 @@
+<div class="card border-primary mb-3">
+  <div class="card-body text-primary">
+      <p class="card-text">Listado de Provincia</p>
+  </div>
+</div>
+<table class="table table-bordered table-striped">
+  <thead>
+      <tr>
+          <th>Id provincia</th>
+          <th>Nombre provincia</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let provincia of provincia">
+          <td>{{provincia.idprovincia}}</td>
+          <td>{{provincia.provincia}}</td>
+          <td><button class="btn btn-danger"> Eliminar provincia</button></td>
+          <td><button class="btn btn-danger"> Modificar provincia</button></td>
+      </tr>
+  </tbody>
+</table>
+<router-outlet></router-outlet>

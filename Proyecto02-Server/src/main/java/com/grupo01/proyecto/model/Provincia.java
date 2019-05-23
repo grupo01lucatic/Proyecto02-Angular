@@ -19,7 +19,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreType;
  */
 @Entity
 @NamedQuery(name = "Provincia.findAll", query = "SELECT p FROM Provincia p")
-@JsonIgnoreType
 public class Provincia implements Serializable {
 	private static final long serialVersionUID = 1L;
 
