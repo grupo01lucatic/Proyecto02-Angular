@@ -16,7 +16,12 @@ export class ProvinciaService {
 
   private provinciaUrl = 'http://localhost:8080/rest/listarprovincias';
 
+
   public getProvincia(){
     return this.http.get<Provincia[]>(this.provinciaUrl);
+  }
+
+  public createProvincia(provincia) {
+    return this.http.post<Provincia>('http://localhost:8080/rest/provincias', provincia);
   }
 }

@@ -20,5 +20,4 @@ export class ListadocontactosComponent implements OnInit {
         this.persona = data;
       });
   }
-
 }
