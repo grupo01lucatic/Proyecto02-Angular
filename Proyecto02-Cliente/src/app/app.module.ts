@@ -9,6 +9,8 @@ import { ListadocontactosComponent } from './components/listadocontactos/listado
 import { HttpClientModule } from "@angular/common/http";
 import { ContactoDetalleComponent } from './contacto-detalle/contacto-detalle.component';
 import { ListadoprovinciasComponent } from './components/listadoprovincias/listadoprovincias.component';
+import { AltaprovinciasComponent } from './components/altaprovincias/altaprovincias.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,15 +19,19 @@ import { ListadoprovinciasComponent } from './components/listadoprovincias/lista
     IndexComponent,
     ListadocontactosComponent,
     ContactoDetalleComponent,
-    ListadoprovinciasComponent
+    ListadoprovinciasComponent,
+    AltaprovinciasComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
+  
 })
 export class AppModule { }

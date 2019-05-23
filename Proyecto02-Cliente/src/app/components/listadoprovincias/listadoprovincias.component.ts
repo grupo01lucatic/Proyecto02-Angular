@@ -20,5 +20,7 @@ export class ListadoprovinciasComponent implements OnInit {
       this.provincia = data;
     });
   }
+  
+
 
 }
